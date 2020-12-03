@@ -1,5 +1,9 @@
 # 使用 Github Actions 在线编译 NanoPi-R4S 固件
 
+## 原作者
+
+soffchen: https://github.com/soffchen/NanoPi-R2S
+
 ## 说明
 * 管理 IP: 192.168.2.1
 * 默认管理密码: password
