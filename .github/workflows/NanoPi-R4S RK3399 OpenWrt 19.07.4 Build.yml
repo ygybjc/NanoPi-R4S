@@ -29,9 +29,6 @@ jobs:
           sudo apt-get -y purge dotnet* ghc* google* llvm* mysql* php* zulu* firefox hhvm
           sudo apt-get -y autoremove --purge          
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash
-
-      #- name: Setup Debug Session
-      #  uses: P3TERX/debugger-action@master
   
       - name: Install Repo
         run: |
@@ -120,10 +117,10 @@ jobs:
           sed -i 's/pcdata(boardinfo.system or "?")/"ARMv8"/' friendlywrt/feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
           sed -i 's/services/vpn/g' friendlywrt/package/feeds/luci/luci-app-openvpn/luasrc/controller/openvpn.lua
 
-      - name: Patch Kernel
-        run: |
-          cd code/kernel/
-          git apply ../../patches/001-add-full_cone_nat.patch
+      # - name: Patch Kernel
+      #   run: |
+      #     cd code/kernel/
+      #     git apply ../../patches/001-add-full_cone_nat.patch
 
       - name: Custom Configure Files
         run: |

@@ -7,18 +7,16 @@ soffchen: https://github.com/soffchen/NanoPi-R2S
 ## 说明
 * 管理 IP: 192.168.2.1
 * 默认管理密码: password
-* 分区扩容：`mkfs.ext4 /dev/mmcblk1p9`，随后在 系统-挂载点 添加挂载点
 
 ## 特色
 * 支持 RTL8821CU/RTL8822BU 芯片的 USB WiFi 设备，已知支持列表：
-    - [COMFAST 726B](https://u.jd.com/KmtGTP)
-    - [COMFAST CF-759BF](https://u.jd.com/AiZit7)
+    - [COMFAST 726B]
+    - [COMFAST CF-759BF]
 * 集成 [vernesong/OpenClash](https://github.com/vernesong/OpenClash) 及其 core/tun/game binaries
 * 集成 [rufengsuixing/luci-app-adguardhome](https://github.com/rufengsuixing/luci-app-adguardhome)
 * 集成 [coolsnowwolf/packages](https://github.com/coolsnowwolf/packages), [coolsnowwolf/luci](https://github.com/coolsnowwolf/luci) 与 [coolsnowwolf/lede/package/lean](https://github.com/coolsnowwolf/lede/tree/master/package/lean)
 * 更新 [jerrykuku/luci-theme-argon](https://github.com/jerrykuku/luci-theme-argon)
 * 集成 [pymumu/smartdns](https://github.com/pymumu/smartdns) 与 luci-app-smartdns
-* 集成 [luci-app-oled](https://github.com/NateLol/luci-app-oled)
 * 集成 [luci-app-jd-dailybonus](https://github.com/jerrykuku/luci-app-jd-dailybonus)
 
 ## 用法

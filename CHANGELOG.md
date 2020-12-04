@@ -1,5 +1,7 @@
 ## 20201204
 * Add some packages
+* Remove flowoffload, oled; add netatalk, avahi, odhcp6
+* Remove Patch Kernel
 
 ## 20201203
 * Switch to R4S
