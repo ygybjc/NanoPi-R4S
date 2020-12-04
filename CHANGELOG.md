@@ -1,7 +1,6 @@
 ## 20201203
 * Switch to R4S
 * Update Clash binary
-* Remove build step: Fix Rootfs Owner and Group
 
 ## 20201102
 * 常规更新
