@@ -1,6 +1,7 @@
 ## 20201204
 * Add some packages
-* Remove flowoffload, oled; add netatalk, avahi, odhcp6
+* Add netatalk, avahi, odhcp6
+* Remove flowoffload, oled
 * Remove Patch Kernel
 
 ## 20201203
