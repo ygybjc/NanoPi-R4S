@@ -7,6 +7,7 @@ soffchen: https://github.com/soffchen/NanoPi-R2S
 ## 说明
 * 管理 IP: 192.168.2.1
 * 默认管理密码: password
+* 分区扩容：`mkfs.ext4 /dev/mmcblk1p9`，随后在 系统-挂载点 添加挂载点
 
 ## 特色
 * 支持 RTL8821CU/RTL8822BU 芯片的 USB WiFi 设备，已知支持列表：
