@@ -30,8 +30,8 @@ jobs:
           sudo apt-get -y autoremove --purge          
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash
   
-      - name: Start SSH via tmate
-        uses: P3TERX/ssh2actions@main
+      # - name: Start SSH via tmate
+      #   uses: P3TERX/ssh2actions@main
 
       - name: Install Repo
         run: |
