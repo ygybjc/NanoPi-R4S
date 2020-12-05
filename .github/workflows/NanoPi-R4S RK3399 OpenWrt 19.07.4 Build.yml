@@ -68,7 +68,7 @@ jobs:
           rm -rf helloworld/
 
           git clone https://github.com/xiaorouji/openwrt-passwall
-          mv openwrt-passwall/* .
+          mv -f openwrt-passwall/* .
           rm -rf openwrt-passwall/
 
           rm -rf lean/luci-theme-argon
