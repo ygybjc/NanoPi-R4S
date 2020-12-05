@@ -30,6 +30,9 @@ jobs:
           sudo apt-get -y autoremove --purge          
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash
   
+      - name: Start SSH via tmate
+        uses: P3TERX/ssh2actions@main
+
       - name: Install Repo
         run: |
           git clone https://github.com/friendlyarm/repo
@@ -64,6 +67,10 @@ jobs:
           mv helloworld/* .
           rm -rf helloworld/
 
+          git clone https://github.com/xiaorouji/openwrt-passwall
+          mv openwrt-passwall/* .
+          rm -rf openwrt-passwall/
+
           rm -rf lean/luci-theme-argon
           git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 
@@ -86,7 +93,9 @@ jobs:
         run: |
           cd code/friendlywrt/package/base-files/files
           mkdir -p etc/openclash/core
-          wget -qO- https://github.com/Dreamacro/clash/releases/download/v1.3.0/clash-linux-armv8-v1.3.0.gz | gunzip -c > etc/openclash/core/clash
+          wget -qO- https://github.com/vernesong/OpenClash/releases/download/Clash/clash-linux-armv8.tar.gz | tar xOvz > etc/openclash/core/clash
+          wget -qO- https://github.com/vernesong/OpenClash/releases/download/TUN-Premium/clash-linux-armv8-2020.11.23.g4474306.gz | gunzip -c > etc/openclash/core/clash_tun
+          wget -qO- https://github.com/vernesong/OpenClash/releases/download/TUN/clash-linux-armv8.tar.gz | tar xOvz > etc/openclash/core/clash_game
           chmod +x etc/openclash/core/clash*
 
       - name: Update Target.mk
