@@ -1,3 +1,7 @@
+## 20201205
+* Add flowoffload, passwall
+* Update Clash binaries
+
 ## 20201204
 * Add some packages
 * Add netatalk, avahi, odhcp6
