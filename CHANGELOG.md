@@ -1,3 +1,6 @@
+## 20201206
+* Remove flowoffload
+
 ## 20201205
 * Add flowoffload, passwall
 * Update Clash binaries
