@@ -98,7 +98,7 @@ jobs:
           wget -qO- https://github.com/vernesong/OpenClash/releases/download/TUN-Premium/clash-linux-armv8-2020.11.23.g4474306.gz | gunzip -c > etc/openclash/core/clash_tun
           wget -qO- https://github.com/vernesong/OpenClash/releases/download/TUN/clash-linux-armv8.tar.gz | tar xOvz > etc/openclash/core/clash_game
           chmod +x etc/openclash/core/clash*
-
+      
       - name: Update Target.mk
         run: |
           cd code/friendlywrt/include
