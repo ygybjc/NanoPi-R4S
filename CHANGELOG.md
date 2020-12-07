@@ -1,5 +1,4 @@
-## 20201206
-* Add flowoffload 
+## 20201207
 * Update Clash binaries
 
 ## 20201204
