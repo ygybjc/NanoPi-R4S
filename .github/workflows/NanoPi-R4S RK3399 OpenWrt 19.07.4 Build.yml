@@ -58,6 +58,21 @@ jobs:
           sed -i 's/^src-git packages.*/src-git packages https:\/\/github.com\/coolsnowwolf\/packages/' feeds.conf.default
           echo 'src-git node https://github.com/nxhack/openwrt-node-packages.git' >> feeds.conf.default
 
+          echo -e '\nsrc-git lienol https://github.com/xiaorouji/openwrt-passwall' >> feeds.conf.default
+          ./scripts/feeds update lienol
+          rm -rf feeds/lienol/lienol/ipt2socks
+          rm -rf feeds/lienol/lienol/shadowsocksr-libev
+          rm -rf feeds/lienol/lienol/pdnsd-alt
+          rm -rf feeds/lienol/lienol/luci-app-verysync
+          rm -rf feeds/lienol/package/verysync
+          rm -rf package/openwrt-chinadns-ng
+          rm -rf package/luci-app-kodexplorer
+          rm -rf package/luci-app-pppoe-relay
+          rm -rf package/luci-app-pptp-server
+          rm -rf package/luci-app-v2ray-server
+          ./scripts/feeds install -a -p lienol
+
+
       - name: Install Extra Packages
         run: |
           cd code/friendlywrt/package
