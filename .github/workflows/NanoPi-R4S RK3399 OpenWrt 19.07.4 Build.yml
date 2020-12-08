@@ -23,13 +23,13 @@ jobs:
           DEBIAN_FRONTEND: noninteractive
         run: |
           sudo apt-get update
-          sudo rm -rf /usr/share/dotnet /usr/local/lib/android/sdk
-          sudo docker image prune -a -f
+          # sudo rm -rf /usr/share/dotnet /usr/local/lib/android/sdk
+          # sudo docker image prune -a -f
+          # sudo apt-get -y purge dotnet* ghc* google* llvm* mysql* php* zulu* firefox hhvm
+          # sudo apt-get -y autoremove --purge
           sudo apt-get -y install upx-ucl unzip
-          sudo apt-get -y purge dotnet* ghc* google* llvm* mysql* php* zulu* firefox hhvm
-          sudo apt-get -y autoremove --purge          
-          wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash
           sudo apt-get -y install lua5.3 liblua5.3-0 liblua5.3-dev
+          wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash
 
       # - name: Start SSH via tmate
       #   uses: P3TERX/ssh2actions@main
