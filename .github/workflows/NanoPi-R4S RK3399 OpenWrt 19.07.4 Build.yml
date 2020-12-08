@@ -57,8 +57,8 @@ jobs:
           sed -i 's/^src-git luci.*/src-git luci https:\/\/github.com\/coolsnowwolf\/luci/' feeds.conf.default
           sed -i 's/^src-git packages.*/src-git packages https:\/\/github.com\/coolsnowwolf\/packages/' feeds.conf.default
           echo 'src-git node https://github.com/nxhack/openwrt-node-packages.git' >> feeds.conf.default
-          echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >> feeds.conf.default
-          echo 'src-git small https://github.com/kenzok8/small' >> feeds.conf.default
+          # echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >> feeds.conf.default
+          # echo 'src-git small https://github.com/kenzok8/small' >> feeds.conf.default
 
       - name: Install Extra Packages
         run: |
@@ -70,32 +70,32 @@ jobs:
           rm -rf lean/luci-theme-argon
           git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 
-          # git clone https://github.com/rufengsuixing/luci-app-adguardhome
+          git clone https://github.com/rufengsuixing/luci-app-adguardhome
 
-          # git clone https://github.com/fw876/helloworld
-          # mv helloworld/* .
-          # rm -rf helloworld/
+          git clone https://github.com/fw876/helloworld
+          mv helloworld/* .
+          rm -rf helloworld/
 
-          # git clone -b master https://github.com/vernesong/OpenClash
-          # mv OpenClash/luci-app-openclash/ .
-          # rm -rf OpenClash/
+          git clone -b master https://github.com/vernesong/OpenClash
+          mv OpenClash/luci-app-openclash/ .
+          rm -rf OpenClash/
           
-          # git clone https://github.com/pymumu/smartdns.git
-          # mv smartdns smartdns1
-          # mv smartdns1/package/openwrt .
-          # mv openwrt smartdns
-          # rm -rf smartdns1
+          git clone https://github.com/pymumu/smartdns.git
+          mv smartdns smartdns1
+          mv smartdns1/package/openwrt .
+          mv openwrt smartdns
+          rm -rf smartdns1
           
-          # cp -r ../../../package/luci-app-smartdns .
+          cp -r ../../../package/luci-app-smartdns .
           
-          # git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
+          git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
+
+          git clone https://github.com/xiaorouji/openwrt-passwall
+          rm -rf ./naiveproxy ./tcping
+          cp -rf openwrt-passwall/* .
+          rm -rf openwrt-passwall/
 
           # git clone https://github.com/NateLol/luci-app-oled
-
-          # git clone https://github.com/xiaorouji/openwrt-passwall
-          # rm -rf ./naiveproxy ./tcping
-          # cp -rf openwrt-passwall/* .
-          # rm -rf openwrt-passwall/
           
       - name: Install Clash Binaries
         run: |
