@@ -1,5 +1,5 @@
 ## 20201208
-* Test passwall, vssr
+* Add vssr
 
 ## 20201207
 * Update Clash binaries 
