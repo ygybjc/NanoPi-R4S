@@ -1,5 +1,4 @@
 ## 20201209
-* Test passwall 
 * Add vssr
 
 ## 20201207
