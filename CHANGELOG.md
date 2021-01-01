@@ -1,9 +1,9 @@
-## 20201209 bjc ook
+
+## 20201209 bjc ook bjbjb
 * Add vssr
 
 ## 20201207
-* Update Clash binaries 
-
+* Update Clash binarie
 ## 20201204
 * Add some packages
 * Add netatalk, avahi, odhcp6
