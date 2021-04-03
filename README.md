@@ -8,7 +8,7 @@
 直接从 Release 下载最新版固件；或 Fork 到自己的账号下，编辑文件 `CHANGELOG.md` 触发编译动作。
 
 ## 特色
-* 支持 RTL8821CU/RTL8822BU 芯片的 USB WiFi 设备，已知支持列表：
+* 支持 RTL8821CU/RTL8822BU 芯片的 USB WiFi 8112cu 设备，已知支持列表：
     - COMFAST 726B
     - COMFAST CF-759BF
 * 集成 [vernesong/OpenClash](https://github.com/vernesong/OpenClash) 及其 core/tun/game binaries
